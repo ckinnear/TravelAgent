@@ -12,9 +12,11 @@ namespace TravelAgent
 {
     public class Program
     {
-        public static void Main(string[] args)
+        //still just a console app listening to web requests at port 80:
+        public static void Main(string[] args) 
         {
-            BuildWebHost(args).Run();
+            //Build web host and listen for requests:
+            BuildWebHost(args).Run(); 
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

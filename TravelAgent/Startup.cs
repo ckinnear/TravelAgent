@@ -18,17 +18,12 @@ namespace TravelAgent
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+        // At startup, what to do when executed:
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //Add the following to use static files e.g index.html under wwwroot folder:
+            app.UseStaticFiles();
         }
     }
 }
